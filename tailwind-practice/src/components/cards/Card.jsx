@@ -5,17 +5,14 @@ function Card() {
   return (
     <div className="bg-white 
     rounded-xl
-     transition-all 
-     duration-200
       focus:outline-none 
       focus:ring-2 focus:ring-offset-2 
       focus:ring-white-400 
-      shadow-md hover:shadow-2xl
        transition-all
         duration-300
          overflow-hidden
          shadow-lg hover:shadow-lg 
-         transform hover:-translate-y-0.5
+         transform hover:-translate-y-0.6
          max-w-sm m-4">
       
       
