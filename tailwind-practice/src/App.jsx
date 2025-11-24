@@ -1,23 +1,29 @@
-import Button from "./components/buttons/Button";
-import Card from "./components/cards/Card";
-import Input from "./components/inputs/Input";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/Home";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Forms from "./pages/Forms";
+
+import Dashboardpage from "./pages/Dasboardpage";
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <Navbar />
-      <Home />
-      <Button>Click Me</Button>
-      <Card />
-      <Input label="your name" />
-      <Signup />
-      <Login />
-      <Forms />
-    </div>
+    <BrowserRouter>
+      <div className="">
+        <Navbar />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/forms" element={<Forms />} />
+         
+          <Route path="/dashboard/*" element={<Dashboardpage />} />
+          
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
